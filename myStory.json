@@ -1,0 +1,192 @@
+{
+    "Title": "The Lost Kitten",
+    "Credits": "Created by Yazmyn Sims (yzsims@ucsc.edu).",
+    "InitialLocation": "Forest Clearing",
+    "Locations": {
+        "Forest Clearing": {
+            "Body": "You are a kitten who got lost after playing around in a forest near your home.",
+            "Choices": [
+                {
+                    "Text": "Look Around",
+                    "Target": "Mouse"
+                },
+                {
+                    "Text": "Go Left",
+                    "Target": "Deep Forest"
+                },
+                { 
+                    "Text": "Go Right",
+                    "Target": "Cliffside"
+                },
+                {
+                    "Text": "Go Up",
+                    "Target": "Tree"
+                }
+            ]
+        },
+        "Mouse": {
+            "Body": "A mouse standing near a log says he can help but he's hungry for berries.",
+            "Choices": [
+                {
+                    "Requirements":[
+                        "berries"
+                    ], 
+                    "Text": "Give Berries",
+                    "Target": "Log",
+                    
+                    "TargetFailed" : "Mouse"
+                },
+
+                {
+                    "Text": "Back",
+                    "Target": "Forest Clearing"
+                }
+            ]
+        },
+        "Log": {
+            "Body": "The mouse invites you into his log and you exit on the otherside.",
+            "Choices": [
+                {
+                    "Text": "Next",
+                    "Target": "House Yard"
+                }
+            ]
+        },
+        "Tree": {
+            "Body": "You leave to look for something useful when you come across a tree growing berries.",
+            "Choices": [
+                {
+                    "Text": "Climb",
+                    "Target": "Bird"
+                },
+                {
+                    "Text": "Back",
+                    "Target": "Forest Clearing"
+                }
+            ]
+        },
+        "Bird": {
+            "Body": "The bird informs you that you can't get any berries from his tree without giving something in exchange.",
+            "Choices": [
+                {
+                    "Requirements": [
+                        "gift"
+                    ],
+                    
+                    "Text": "Give Gift",
+                    "Target": "Berries",
+                    "TargetFailed" : "Bird"
+                },
+                {
+                    "Text": "Back",
+                    "Target": "Forest Clearing"
+                }
+            ]
+        },
+        "Berries": {
+            "Body": "The bird begins to eat the worm gift and you are able to get the berries while he's distracted.",
+            "Choices": [
+                {
+                    "Text": "Back",
+                    "Target": "Forest Clearing"
+                }
+            ]
+        },
+        "Deep Forest": {
+            "Body": "You've wandered deeper into the forest.",
+            "Choices": [
+                {
+                    "Text": "Look Around",
+                    "Target": "Fallen Tree"
+                },
+                {
+                    "Text": "Back",
+                    "Target": "Forest Clearing"
+                }
+            ]
+        },
+        "Fallen Tree": {
+            "Body": "There's a fallen tree with four weak branches. You don't know why but you feel that you should break the branches. Which order do you break the branches in?",
+            "Choices": [
+                    
+                {
+                    "Requirements": [
+                        "note"
+                    ],
+                    "Text": "423",
+                    "Target": "Tree Hollow",
+                    "TargetFailed" : "Fallen Tree"
+                },
+                {
+                    "Requirements": [
+                        "note"
+                    ],
+                    "Text": "123",
+                    "Target": "Nothing",
+                    "TargetFailed" : "Fallen Tree"
+                },
+                  
+                {
+                    "Requirements": [
+                        "note"
+                    ],
+                    "Text": "231",
+                    "Target": "Nothing",
+                    "TargetFailed" : "Fallen Tree"
+                },
+                {   
+                    "Text": "Back",
+                    "Target": "Deep Forest"
+                }
+            ]
+        },
+        "Tree Hollow":{
+            "Body": "The tree falls away in the middle Inside you find a bunch of worms Maybe the bird will like this.",
+            "Choices": [
+                {
+                    "Text": "Back",
+                    "Target": "Forest Clearing"
+                }
+            ]
+
+        },
+        "Cliffside": {
+            "Body": "You find a Cliffside you are very high up but still you cannot see your home from here.",
+            "Choices": [
+                {
+                    "Text": "Look Around",
+                    "Target": "Rock"
+                },
+                {
+                    "Text": "Back",
+                    "Target": "Forest Clearing"
+                }
+            
+            ]
+        },
+        "Rock": {
+            "Body": "You find a note hidden under a rock it reads. 'Four dogs jump twice around the third tree.' ",
+            "Choices": [
+                {
+                    "Text": "Back",
+                    "Target": "Forest Clearing"
+                }
+            
+            ]  
+        },
+        "Nothing": {
+            "Body": "The branches refuse to break when you try that. Nothing happens.",
+            "Choices": [
+                {
+                    "Text": "Back",
+                    "Target": "Fallen Tree"
+                }
+            
+            ]  
+        },
+        "House Yard": {
+            "Body": "On the otherside of the log, you see the back yard of someone's house. You're home" 
+        }
+
+    }
+}
